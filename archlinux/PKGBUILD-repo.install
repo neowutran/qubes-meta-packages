@@ -59,6 +59,7 @@ populate_keyring() {
         # won't survive anyway)
         usr/bin/pacman-key --init
         usr/bin/pacman-key --populate
+        usr/bin/pacman -Sy archlinux-keyring --noconfirm
     else
         # otherwise, import just new keys
         usr/bin/pacman-key --populate qubesos-vm
